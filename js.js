@@ -41,3 +41,10 @@ button.addEventListener('click', () => {
     });
 });
 
+const restart = document.querySelector('.restart');
+restart.addEventListener('click', () => {
+    cells.forEach((button) => {
+        button.textContent = "";
+    });
+});
+
