@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 .container{
@@ -29,7 +30,7 @@
     align-items: center;
 }
 
-.turn{
+.status{
     font-size: 2rem;
 }
 
@@ -48,6 +49,7 @@
     align-items: center;
     font-size: 3rem;
 }
+
 
 .restart{
     padding: 8px 16px;
