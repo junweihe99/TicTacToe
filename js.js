@@ -36,7 +36,7 @@ cells.forEach((button) => {
 button.addEventListener('click', () => {
         if(button.textContent == "")
         {
-            button.textContent = "0";
+            button.textContent = "O";
         }
     });
 });
