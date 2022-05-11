@@ -14,7 +14,7 @@ let nextPlayer = xPlayer;
 //Select all cell elements
 const cells = document.querySelectorAll(".cell");
 
-//reset game board
+//Select restart button
 const restart = document.querySelector(".restart");
 
 //All winning combinations
@@ -31,7 +31,7 @@ const WIN = [
 
 //Start game
 game();
-//Add restart button
+//Add restart button functionality
 restart.addEventListener('click', game);
 
 
@@ -87,7 +87,7 @@ function placePiece(cell, currentPiece) {
 function checkWin(currentPlayer){
     //return true if at least one of the winning combinations match the game board
     return WIN.some(combination => {
-        //return true if every associated index has same piece
+        //return true if every index matches with the same piece
         return combination.every(index => {
             //return true if the cell contains the current player's piece
             return cells[index].textContent.includes(currentPlayer.piece);
@@ -107,11 +107,14 @@ function endGame(draw){
     else{
         status.textContent = `Player ${currentPlayer.piece} wins!`;
     }
+    cells.forEach((cell) => {
+        cell.removeEventListener('click', makeMove);
+    });
 }
 
 //Check for draw
 function isDraw(){
-    //return true if every cell is occupied
+    //return true if every cell is occupied and there are no winner yet
     return [...cells].every(cell => {
         return cell.textContent.includes(currentPlayer.piece) ||
                cell.textContent.includes(nextPlayer.piece);
