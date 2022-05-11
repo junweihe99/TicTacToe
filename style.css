@@ -58,3 +58,7 @@
     background: lightcoral;
     font-size: 2rem;
 }
+
+button:hover{
+    box-shadow: 0 0 5px 5px lightblue inset;
+}
