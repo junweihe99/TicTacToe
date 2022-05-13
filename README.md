@@ -18,3 +18,9 @@ TicTacToe is a web recreation of the popular Tic-Tac-Toe game. The overall struc
   <ul>
     <li>Implement AI to play as player 2
   </ul>
+  
+<h4>Credits</h4>
+  <ul>
+    <li><a href="https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe">The Odin Project</a>
+  </ul>
+
